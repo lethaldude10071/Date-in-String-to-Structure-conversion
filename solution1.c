@@ -1,4 +1,4 @@
-// Solution for Date in String format to Structure conversion
+// Solution for Date in String format to Structure conversion 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,10 +54,12 @@ status_t string_to_date_converter(char* input_string, my_date_t* res_date) {
 int main() {
   char input_string[MAX_DATE_LENGTH] = "26/12/2021"; // A sample input string
   my_date_t res_date; // A variable to hold the result structure
+  
+  printf("Input date:%s\n",input_string);
 
-  status_t status = string_to_date_converter(input_string, &res_date); // Call the function and store the status
+  status_t status = string_to_date_converter(input_string,&res_date); // Call the function and store the status
 
-  // Print different messages based on the status value
+// Print different messages based on the status value
   switch (status) { 
     case SUCCESS:
       printf("Conversion successful!\n");
